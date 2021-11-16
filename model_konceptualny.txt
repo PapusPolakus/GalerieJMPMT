@@ -1,0 +1,51 @@
+@startuml
+entity user{
+* Name
+* Password
+* E_mail
+}
+
+
+entity gallery{
+* Name
+* Creation date
+* Number of albums
+* Files size
+}
+
+entity album{
+* Name
+* Creation date
+* Number of images
+* Files size
+}
+
+entity image{
+* Name
+* Creation date
+* Number of tags
+* Number of comments
+* File size
+* File link
+}
+
+entity comments{
+* Text
+* Creation date
+}
+
+entity tag{
+* Name
+}
+
+user --|{ gallery
+user --|{ comments
+
+
+gallery --|{ album
+
+album --|{ image
+
+image --|{ comments
+image --|{ tag
+@enduml
