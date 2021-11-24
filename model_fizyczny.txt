@@ -75,6 +75,6 @@ gallery --|{ album
 album --|{ image
 
 image --|{ comments
-tag_image --|{ tag
-tag_image --|{ image
+tag --|{ tag_image
+image --|{ tag_image
 @enduml
